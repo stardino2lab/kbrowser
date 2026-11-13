@@ -152,15 +152,12 @@ the multiplexer; use `Ctrl+G` and leader `m`.
 
 ## Herdr layout
 
-[`herdr/kb-browser`](herdr/kb-browser) is a layout for [Herdr](https://herdr.dev):
-Herdr's main window with a browser address bar under the tabs. Type a URL and
-press Enter, and `kb view` opens in a pane beside the agent's terminal.
+[herdr-kb-browser](https://github.com/stardino2lab/herdr-kb-browser) is a
+layout for [Herdr](https://herdr.dev): Herdr's main window with a browser
+address bar under the tabs. Type a URL and press Enter, and `kb view` opens in
+a pane beside the agent's terminal.
 
-![kb view beside an agent's terminal in Herdr](herdr/kb-browser/preview.png)
-
-Its [RECIPE.md](herdr/kb-browser/RECIPE.md) describes it in full. To add it,
-install `kb` as above, then ask your agent in Herdr to add the layout from
-`https://github.com/stardino2lab/kbrowser/tree/main/herdr/kb-browser`.
+![kb view beside an agent's terminal in Herdr](docs/preview.png)
 
 ## Limits
 
