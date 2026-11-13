@@ -35,11 +35,12 @@ Download a build from the
 (Windows x64, Linux x64), unpack it and put `kb` on your PATH. `SHA256SUMS` on
 the same page lists the checksums.
 
+Either way kb needs Chrome, Chromium or Edge installed. It looks in the usual
+locations; set `KB_CHROME` to an executable to override.
+
 Or build it yourself. Requirements:
 
-- Rust (stable) to build
-- Chrome, Chromium or Edge installed. kb looks in the usual locations; set
-  `KB_CHROME` to an executable to override.
+- Rust (stable)
 - Windows or Linux. Both are tested. The code has a macOS path, but it has
   never been run there.
 
