@@ -1,0 +1,12 @@
+{
+  "name": "kb",
+  "description": "Browse and operate web pages with the kb CLI: numbered element refs, real input events, and notes a human pins on the page.",
+  "version": "0.1.0",
+  "author": {
+    "name": "stardino2lab",
+    "url": "https://github.com/stardino2lab"
+  },
+  "homepage": "https://github.com/stardino2lab/kbrowser",
+  "repository": "https://github.com/stardino2lab/kbrowser",
+  "license": "MIT"
+}

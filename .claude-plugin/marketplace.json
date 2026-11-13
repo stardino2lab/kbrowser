@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "kbrowser",
+  "description": "kb: a terminal browser that an AI agent and a human drive at the same time.",
+  "owner": {
+    "name": "stardino2lab",
+    "url": "https://github.com/stardino2lab"
+  },
+  "plugins": [
+    {
+      "name": "kb",
+      "description": "Browse and operate web pages with the kb CLI: numbered element refs, real input events, and notes a human pins on the page.",
+      "source": "./plugins/kb",
+      "category": "development",
+      "homepage": "https://github.com/stardino2lab/kbrowser"
+    }
+  ]
+}

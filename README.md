@@ -123,6 +123,19 @@ Main commands:
 Write refs as plain numbers (`kb click 3`). `@3` also works, but PowerShell
 swallows a bare `@3`.
 
+### Claude Code plugin
+
+This repository is also a Claude Code plugin marketplace. The `kb` plugin adds
+a skill that teaches Claude the loop above, the error codes and how to read
+your pins. It does not install the `kb` binary; do that first.
+
+```text
+/plugin install kb --marketplace stardino2lab/kbrowser
+```
+
+On older Claude Code versions: `/plugin marketplace add stardino2lab/kbrowser`,
+then `/plugin install kb@kbrowser`.
+
 ## Human usage
 
 ```bash
