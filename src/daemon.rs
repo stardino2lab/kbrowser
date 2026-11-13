@@ -700,15 +700,18 @@ impl Daemon {
                     Some(b) => (b.pid, !b.cdp.is_dead(), b.debug_port),
                     None => (0, false, 0),
                 };
-                let tabs = self.shared.lock().tabs.len();
+                let (tabs, viewers) = {
+                    let st = self.shared.lock();
+                    (st.tabs.len(), st.views.len())
+                };
                 let pid = std::process::id();
                 return Ok(obj! {
                     "text" => format!(
-                        "daemon pid={} chrome pid={} ({}) tabs={} home={}",
-                        pid, chrome_pid, if alive { "alive" } else { "dead" }, tabs, self.home.display()
+                        "daemon pid={} chrome pid={} ({}) tabs={} viewers={} home={}",
+                        pid, chrome_pid, if alive { "alive" } else { "dead" }, tabs, viewers, self.home.display()
                     ),
                     "pid" => pid, "chrome_pid" => chrome_pid, "chrome_alive" => alive,
-                    "debug_port" => port as u32, "tabs" => tabs,
+                    "debug_port" => port as u32, "tabs" => tabs, "viewers" => viewers,
                     "home" => self.home.display().to_string(),
                     "version" => env!("CARGO_PKG_VERSION"),
                 });

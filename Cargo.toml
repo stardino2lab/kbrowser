@@ -3,6 +3,11 @@ name = "kbrowser"
 version = "0.1.0"
 edition = "2021"
 description = "Terminal browser for AI agents and humans: CDP daemon + @N ref CLI"
+readme = "README.md"
+keywords = ["browser", "cdp", "terminal", "agent", "automation"]
+categories = ["command-line-utilities"]
+license = "MIT"
+repository = "https://github.com/stardino2lab/kbrowser"
 
 [[bin]]
 name = "kb"
