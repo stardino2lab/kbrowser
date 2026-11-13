@@ -35,11 +35,14 @@ Requirements:
 - Rust (stable) to build
 - Chrome, Chromium or Edge installed. kb looks in the usual locations; set
   `KB_CHROME` to an executable to override.
-- Windows, Linux or macOS
+- Windows or Linux. Both are tested. The code has a macOS path, but it has
+  never been run there.
 
 ```bash
-cargo install --path .
+cargo install --git https://github.com/stardino2lab/kbrowser
 ```
+
+Or, from a clone: `cargo install --path .`
 
 This installs a single binary, `kb`. The crate has no dependencies: JSON,
 WebSocket and the CDP client are implemented in the repository.
@@ -147,6 +150,18 @@ Right-click or Alt+click an element also pins it. Inside tmux, Herdr and
 similar multiplexers, `Ctrl+B` and the right mouse button usually belong to
 the multiplexer; use `Ctrl+G` and leader `m`.
 
+## Herdr layout
+
+[`herdr/kb-browser`](herdr/kb-browser) is a layout for [Herdr](https://herdr.dev):
+Herdr's main window with a browser address bar under the tabs. Type a URL and
+press Enter, and `kb view` opens in a pane beside the agent's terminal.
+
+![kb view beside an agent's terminal in Herdr](herdr/kb-browser/preview.png)
+
+Its [RECIPE.md](herdr/kb-browser/RECIPE.md) describes it in full. To add it,
+install `kb` as above, then ask your agent in Herdr to add the layout from
+`https://github.com/stardino2lab/kbrowser/tree/main/herdr/kb-browser`.
+
 ## Limits
 
 - Cross-origin iframes are not in the snapshot yet. They show up as a note.
@@ -155,6 +170,9 @@ the multiplexer; use `Ctrl+G` and leader `m`.
 - kb drives its own Chrome profile. It does not attach to the browser you
   already have open.
 - CDP only, so Chromium-based browsers only.
+- Chrome's debugging port is open on localhost while the daemon runs. `kb stop`
+  closes it.
+- The translations were not reviewed by native speakers.
 
 ## Configuration
 
