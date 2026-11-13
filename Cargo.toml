@@ -1,0 +1,15 @@
+[package]
+name = "kbrowser"
+version = "0.1.0"
+edition = "2021"
+description = "Terminal browser for AI agents and humans: CDP daemon + @N ref CLI"
+
+[[bin]]
+name = "kb"
+path = "src/main.rs"
+
+[dependencies]
+
+[profile.release]
+opt-level = 2
+strip = true

@@ -1,0 +1,3 @@
+# Each e2e test launches its own daemon + headless Chrome; cap parallelism.
+[env]
+RUST_TEST_THREADS = "4"
