@@ -2,6 +2,11 @@
 
 A terminal browser that an AI agent and a human drive at the same time.
 
+![An agent fills a form with kb while a person pins a note on the button; the agent reads the note and clicks](docs/demo.gif)
+
+*Left: the agent's shell. Right: the same tab in `kb view`. The pink note is
+typed by the person; `kb pins` hands it to the agent with the element's ref.*
+
 The agent uses a CLI: `kb snapshot` prints the page as an accessibility tree
 with numbered refs, and `kb click 3` acts on one. The human runs `kb view` and
 sees the same tabs live in the terminal, with mouse and keyboard going to the

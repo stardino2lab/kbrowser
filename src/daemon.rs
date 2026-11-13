@@ -969,7 +969,10 @@ impl Daemon {
         let vw = if num("viewport_w") > 0 { num("viewport_w") } else { px_w };
         let vh = ((vw as f64) * (px_h as f64) / (px_w as f64)).round().max(1.0) as i64;
         if let Some(t) = self.shared.lock().tab(tab) {
-            t.view_scale = vw as f64 / px_w as f64;
+            // Labels keep their on-screen size when the page is shrunk into the
+            // pane, and grow with a large pane (a 4K terminal) so they stay
+            // readable next to the page: 1280 px of viewport is the baseline.
+            t.view_scale = (vw as f64 / px_w as f64).max(vw as f64 / 1280.0);
             t.overlay_dirty = true;
         }
         let t = Duration::from_secs(5);
