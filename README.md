@@ -30,7 +30,12 @@ you point at it.
 
 ## Install
 
-Requirements:
+Download a build from the
+[releases page](https://github.com/stardino2lab/kbrowser/releases/latest)
+(Windows x64, Linux x64), unpack it and put `kb` on your PATH. `SHA256SUMS` on
+the same page lists the checksums.
+
+Or build it yourself. Requirements:
 
 - Rust (stable) to build
 - Chrome, Chromium or Edge installed. kb looks in the usual locations; set
